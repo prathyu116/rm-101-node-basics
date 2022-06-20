@@ -37,7 +37,7 @@ app.post("/users", async (req, res) => {
   try {
     const newuser = req.body;
     DB.push(newuser);
-    return res.status(200).json({ updatedDB: DB });
+    return res.status(201).json({ updatedDB: DB });
   } catch (err) {
     return res.status(500).send({ message: err.message });
   }
